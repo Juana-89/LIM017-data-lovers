@@ -1,8 +1,8 @@
-import data from './data/ghibli/ghibli.js'; //importando data de ghibli.js
-import { sortData, sortMovieRanking } from './data.js'; //importando objeto "sortDataMovies" de data.js
+import data from './data/ghibli/ghibli.js';
+import { sortData, sortMovieRanking, filterMoviexProducer } from './data.js';
 const films = data.films;
 const mainmovies = document.querySelector("main");
-//const count = document.querySelector(".count");
+
 
 /*función que activa música en botón "Leer más"*/
 const audioMusicTotoro = document.querySelector("#button_start");
@@ -11,38 +11,20 @@ audioMusicTotoro.addEventListener("click", () => {
     audioTagTotoro.play();
 });
 
-
-// function showInfoMovies(filmsPublished){
-//   mainmovies.innerHTML = "";
-//   for (let i = 0; i < filmsPublished.length; i++){
-//     let movieGhibli = `    
-//       <div id="contenido-peliculas" class="contenido-peliculas"><br><br><br><br><br><br><br>
-//         <div class="contenedor_movies">
-//          <img src=${filmsPublished[i].poster} alt="" class="div_img_movie"  /></a><br>
-//           <b><h3 class="contenedor_section_h3__movti"> ${filmsPublished[i].title}</h3></b> </br>
-//           <div class="div_contenido_movies"><b>Fecha de publicación: </b>${filmsPublished[i].release_date} </br>
-//           <b>Director: </b>${filmsPublished[i].director} </br>
-//           <b>Productor: </b>${filmsPublished[i].producer} </br>
-//           <b>Puntuación: </b>${filmsPublished[i].rt_score}</br>
-//         </div>
-//       </div>
-//       `;
-//       mainmovies.innerHTML += movieGhibli;
-
 /*función que muestra carteles de películas */
 const showInfoMovies = (arrayData) =>{
     mainmovies.innerHTML = "";
     arrayData.forEach((filmsPublished) => {  
         const divFilm = document.createElement("div"); //div para cada tarjeta
         divFilm.classList.add("div_content_movies");
-         divFilm.innerHTML=`<img src="${filmsPublished.poster}" class="div_img_movie" /><br>
-         <b><h3 class="contenedor_section_h3__movti"><p class="films-titles">${filmsPublished.title}</h3></b></br>
-         <span class="span_info_Card"><b>Año publicación: </b>${filmsPublished.release_date}</span></br>
-         <span class="span_info_Card"><b>Director: </b>${filmsPublished.director}</span></br>
-         <span class="span_info_Card"><b>Producer: </b>${filmsPublished.producer}</span></br>
-         <span class="span_info_Card"><b>Score: </b> ${filmsPublished.rt_score}</span> </br>`;
-         divFilm.setAttribute("id", filmsPublished.id);
-         mainmovies.appendChild(divFilm);
+        divFilm.innerHTML=`<img src="${filmsPublished.poster}" class="div_img_movie" /><br>
+        <b><h3 class="contenedor_section_h3__movti"><p class="films-titles">${filmsPublished.title}</h3></b></br>
+        <span class="span_info_Card"><b>Año publicación: </b>${filmsPublished.release_date}</span></br>
+        <span class="span_info_Card"><b>Director: </b>${filmsPublished.director}</span></br>
+        <span class="span_info_Card"><b>Producer: </b>${filmsPublished.producer}</span></br>
+        <span class="span_info_Card"><b>Score: </b> ${filmsPublished.rt_score}</span> </br>`;
+        divFilm.setAttribute("id", filmsPublished.id);
+        mainmovies.appendChild(divFilm);
 
         //creando un identificador para cada card y conectarlo con el id de la película
         const identityMovie = document.getElementById(filmsPublished.id)
@@ -68,7 +50,7 @@ const showInfoMovies = (arrayData) =>{
             <b><h3 class="div_aside_h3_title">${filmsPublished.title}</h3></b></br>
             <span class="span_descrip_Card"><b>Año publicación: </b>${filmsPublished.release_date}</span></br>
             <span class="span_descrip_Card"><b>Director: </b>${filmsPublished.director}</span></br>
-            <span class="span_descrip_Card"><b>Producer: </b>${filmsPublished.producer}</span></br>
+            <span class="span_descrip_Card"><b>Productor: </b>${filmsPublished.producer}</span></br>
             <span class="span_descrip_Card"><b>Score: </b>${filmsPublished.rt_score}</span>
             <span class="span_descrip_Card"><div class="span_descrip_Card1"><b>Sipnosis: </b>${filmsPublished.description}</div></br></br></span></br>`;
 
@@ -93,9 +75,6 @@ const showInfoMovies = (arrayData) =>{
             <span class="span_info_People"><b>Especie: </b>${people.specie}</span></br>`;
 
             //sección de los escenarios
-            //se crea un div solo para el título porque de lo contrario repetiría si lo escribes junto al foreach
-                      // //sección de los escenarios
-            // //se crea un div solo para el título porque de lo contrario repetiría si lo escribes junto al foreach
             const locationTitleSection = document.createElement("section");
             locationTitleSection.classList.add("section_title_location");
             locationTitleSection.innerHTML+=`<b><h2 class= "h2_section_location">Locaciones: </h2></b></br>`
@@ -108,7 +87,7 @@ const showInfoMovies = (arrayData) =>{
             sectionLocationMovie.innerHTML+=`
             <img src="${location.img}" class="div_img_location" /><br>
             <b><h3 class="name_location"><p class="name_location">Nombre: ${location.name}</h3></b></br>
-            <span class="span_info_Location"><b>Color de cabello: </b>${location.climate}</span></br>
+            <span class="span_info_Location"><b>Cima: </b>${location.climate}</span></br>
             <span class="span_info_Location"><b>Especie: </b>${location.terrain}</span></br>`;
 
             
@@ -166,15 +145,7 @@ for (let i = 0; i < noDuplicatemovieProducer.length; i++) {
 /*filtro de los productores de las peliculas para que aparezcan los titles que produjeron*/
 
 selectNameProducer.addEventListener("change", () => {
-    const filterMoviexProducer = films.filter(function (name) {
-        //console.log(typeof name.producer, typeof filternameProducer.value, name.producer, filternameProducer.value)
-        if (name.producer === selectNameProducer.value) {
-            return true;
-        } else {
-            return false;
-        }
-    })
-    showInfoMovies(filterMoviexProducer);
+    showInfoMovies(filterMoviexProducer(films, selectNameProducer.value));
 });
 
 /*filtrado ascendente y descendente alfabéticamente*/
@@ -188,37 +159,3 @@ const selectRankingMovies = document.querySelector("#input_publication3");
 selectRankingMovies.addEventListener("change", () => {
     showInfoMovies(sortMovieRanking(films,selectRankingMovies.value))
 });
-
-
-////////codigo prueba
-// /*filtro de las películas mejores rankeadas*/
-// const selectBestTopMovies = document.querySelector("#input_publication3");
-// selectBestTopMovies.addEventListener("change", () => {
-//     const topMovies= films.sort(function (c, d) {
-//         if (selectBestTopMovies.value === "Mejores rankeadas") {
-//             if (parseInt(c.rt_score) < parseInt(d.rt_score)) {
-//                 return 1;
-//             } if (parseInt(c.rt_score) > parseInt(d.rt_score)) {
-//                 return -1;
-//             }
-//         }
-//         return 0;
-//     })
-//     showInfoMovies(topMovies.slice(0, 5));
-// });
-
-// // /*filtro de las movies peores rankeadas*/
-// const selectLeastTopMovies = document.querySelector("#input_publication3");
-// selectLeastTopMovies.addEventListener("change", () => {
-//     const leastMovies = films.sort(function (e, f) {
-//         if (selectLeastTopMovies.value === "Menos rankeadas") {
-//             if (parseInt(e.rt_score) > parseInt(f.rt_score)) {
-//                 return 1;
-//             } if (parseInt(e.rt_score) < parseInt(f.rt_score)) {
-//                 return -1;
-//             }
-//         }
-//         return 0;
-//     })
-//     showInfoMovies(leastMovies.slice(0, 5));
-// });
