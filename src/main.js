@@ -3,7 +3,6 @@ import { sortData, sortMovieRanking, filterMoviexProducer } from './data.js';
 const films = data.films;
 const mainmovies = document.querySelector("main");
 
-
 /*función que activa música en botón "Leer más"*/
 const audioMusicTotoro = document.querySelector("#button_start");
 audioMusicTotoro.addEventListener("click", () => {
@@ -31,6 +30,7 @@ const showInfoMovies = (arrayData) =>{
         identityMovie.addEventListener("click", newPageInfoMovie);
         function newPageInfoMovie (){
             mainmovies.innerHTML = "";
+
             //oculta los elementos del divFilms
             document.querySelector(".section_welcome").style.display = "none";
             document.querySelector(".content-text").style.display = "none";
@@ -55,7 +55,6 @@ const showInfoMovies = (arrayData) =>{
             <span class="span_descrip_Card"><div class="span_descrip_Card1"><b>Sipnosis: </b>${filmsPublished.description}</div></br></br></span></br>`;
 
             //sección de los personajes
-            //se crea un div solo para el título porque de lo contrario repetiría si lo escribes junto al foreach
             const peopleTitleSection = document.createElement("section");
             peopleTitleSection.classList.add("section_title_people");
             peopleTitleSection.innerHTML+=`<b><h2 class= "h2_section_people">Personajes: </h2></b></br>`
@@ -89,11 +88,10 @@ const showInfoMovies = (arrayData) =>{
             <b><h3 class="name_location"><p class="name_location">Nombre: ${location.name}</h3></b></br>
             <span class="span_info_Location"><b>Cima: </b>${location.climate}</span></br>
             <span class="span_info_Location"><b>Especie: </b>${location.terrain}</span></br>`;
-
-            
+        })
             peopleTitleSection.append(sectionPeopleMovie);
             mainmovies.append(asideInfoMovie, sectionDescripMovie, peopleTitleSection );
-        })         
+                
    })
     }
 })}
@@ -123,14 +121,8 @@ selectYearPublisher.addEventListener("change", () => {
     })
     showInfoMovies(filterMoviexYear);
 });
-// //borrando duplicados de la data para que aparezca en los selects
-// const noInfoDuplicates = (array) => { 
-// const result  = array.filter((item, index) => {
-//     return array.indexOf(item) === index;
-// });
-// return result;};//
 
-// /*Declarando variables para buscar el productor*/
+/*Función para buscar el productor*/
 
 const searchDuplicateProducter = films.map((item) => { return item.producer });
 const noDuplicatemovieProducer = searchDuplicateProducter.filter((item, index) => {
