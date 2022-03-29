@@ -1,3 +1,4 @@
+
 export default {
   "studio": "Studio Ghibli Inc.",
   "films": [
@@ -2453,3 +2454,4 @@ export default {
     }
   ]
 }
+

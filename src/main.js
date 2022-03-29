@@ -11,6 +11,24 @@ audioMusicTotoro.addEventListener("click", () => {
     audioTagTotoro.play();
 });
 
+
+// function showInfoMovies(filmsPublished){
+//   mainmovies.innerHTML = "";
+//   for (let i = 0; i < filmsPublished.length; i++){
+//     let movieGhibli = `    
+//       <div id="contenido-peliculas" class="contenido-peliculas"><br><br><br><br><br><br><br>
+//         <div class="contenedor_movies">
+//          <img src=${filmsPublished[i].poster} alt="" class="div_img_movie"  /></a><br>
+//           <b><h3 class="contenedor_section_h3__movti"> ${filmsPublished[i].title}</h3></b> </br>
+//           <div class="div_contenido_movies"><b>Fecha de publicación: </b>${filmsPublished[i].release_date} </br>
+//           <b>Director: </b>${filmsPublished[i].director} </br>
+//           <b>Productor: </b>${filmsPublished[i].producer} </br>
+//           <b>Puntuación: </b>${filmsPublished[i].rt_score}</br>
+//         </div>
+//       </div>
+//       `;
+//       mainmovies.innerHTML += movieGhibli;
+
 /*función que muestra carteles de películas */
 const showInfoMovies = (arrayData) =>{
     mainmovies.innerHTML = "";

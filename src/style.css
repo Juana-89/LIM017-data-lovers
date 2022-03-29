@@ -1,11 +1,11 @@
+
 *{
 	padding: 0;
 	margin: 0;
 	text-decoration: none;
 	list-style: none;
 	box-sizing: border-box;
-}
-
+  }
 body{
 	display:grid;
 	grid-auto-columns: auto;
@@ -27,9 +27,8 @@ nav {
 .link-image{
 	position: absolute;
 	padding: 0 50px;
-}
-
-.header__image_logo{
+  }
+ .header__image_logo{
 	width: 13em;
 	margin-left: -10px;
 
@@ -39,12 +38,12 @@ nav {
 	margin-right: 20px;
 }
 
-.list_header {
+.list__header {
 	display: inline-block;
 	line-height: 80px;
 	margin: 0 25px;
 }
-.nav_ul_list_a{
+.nav_ul_list__a{
 font-family: "Alumni Sans", cursiva;
 font-weight: bold;
 color:#fff;
@@ -72,7 +71,7 @@ width: max-content;/*no corta el contenido que tiene más de 1 palabra*/
 }
 
 #check{
-	display: none;
+	  display: none;
 	}
 #section_welcome{
 		background: url("img/bienvenida.gif") no-repeat;
@@ -141,7 +140,7 @@ width: max-content;/*no corta el contenido que tiene más de 1 palabra*/
 	text-align: center;
 	font-size: 180px;
 	color: #fff;
-	margin-top: 1.2em;
+	margin-top:1.2em;
 	text-shadow: 6px 9px  rgba(0, 0, 0, 0.9);
 }
 
@@ -150,7 +149,7 @@ width: max-content;/*no corta el contenido que tiene más de 1 palabra*/
 	font-family: "Boogaloo", cursiva;
 	color: #000;
 	text-align: center;
-	font-size: 40px;
+	font-size: 30px;
 	text-shadow: 2px 5px  rgba(255, 252, 252, 0.9);
 	margin-top:0;
 }
@@ -158,23 +157,13 @@ width: max-content;/*no corta el contenido que tiene más de 1 palabra*/
 	font-family: "Boogaloo", cursiva;
 	color: #000;
 	text-align: center;
-	font-size: 40px;
+	font-size: 30px;
 	text-shadow: 2px 5px  rgba(255, 252, 252, 0.9);
 	margin-top:0;
 }
 #button_start{
 	font-family: "Boogaloo", cursiva;
 	background-color: #f56c57;
-	color: white;
-	border-radius: 20px;
-	font-size: 30px;
-	width: 140px;
-	height: 70px;
-	cursor: pointer;
-}
-#section_welcome #button_start:hover{
-	font-family: "Boogaloo", cursiva;
-	background-color: #d34e24;
 	color: white;
 	border-radius: 20px;
 	font-size: 30px;
@@ -217,18 +206,22 @@ footer{
 	font-size: 26px;
 	border: 4px solid #2f2f28;
 	background-color: #f0eff0;
-}
 
+}
 div section aside img {
 	margin-left: -30px;
 	margin-right:41px;
 }
-
 th{
 	text-align: center;
 	color: #fff;
 	background-color: #af1c1c;
 	}
+	
+td		{
+		padding-top:15px;/*mantiene separado los textos*/
+		font-size: 16px;
+		}
 
 #content-text {
 	display: flex;
@@ -241,14 +234,8 @@ th{
 		padding: 70px 20px;
 	}
 
+.list__movies {
 
-
-#contenido-biography{
-		font-family: 'Short Stack', cursiva;
-		padding: 70px 20px;
-	}
-
-.list_movies {
 	list-style: none;
 }
 
@@ -368,8 +355,8 @@ audio{
 	#section_welcome{
 		height: calc(40vh - 4px);
 		width: calc(80vh - 8px);
-	}
-	#text-welcome1{
+	  }
+	  #text-welcome1{
 		font-size: 70px;
 		margin-top:2em;
 		text-shadow: 3px 5px  rgba(0, 0, 0, 0.9);
@@ -378,18 +365,21 @@ audio{
 	font-size: 20px;
 	text-shadow: 2px 2px  rgba(255, 252, 252, 0.9);
 	margin-top:1em;
-	}
+}
 	#text-welcome3{
+	
 	font-size: 20px;
 	text-shadow: 2px 2px  rgba(255, 252, 252, 0.9);
-	}
+
+}
 	#button_start{
 	border-radius: 10px;
 	font-size: 15px;
 	width: 80px;
 	height: 40px;
-	}
-    .span_search{
+
+}
+  .span_search{
 	margin-right: 150px;
 	flex-direction: columns;
 }
@@ -424,9 +414,9 @@ main .card{
 	background: #ececec;
 	border-radius: 30px;
 	width: auto;
-}
+  }
 
-.cards{/* cards */
+  .cards{/* cards */
     margin-left: auto;
     margin-right: auto;
     max-width: 1138px;
