@@ -1,3 +1,4 @@
+// import dataBase from './data/ghibli/ghibli.js';
 /*objeto ordena ascendente y descendente*/
 export const sortData = (data,sortOrder) => {
     if (sortOrder === "A-Z") {
@@ -70,3 +71,13 @@ export const filterMoviexProducer = (films, nameProducer) => {
   return filterNameProducer;
 };
 
+/*Objeto para el computeStates*/
+export const computeStats = (data, genderPeople) =>{
+    const totalGender = data.reduce(function (total, people){
+      console.log(totalGender);
+      if (people.gender === genderPeople){
+        return total + 1;
+      }
+      return total;
+    },0)
+  }
