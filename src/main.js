@@ -30,7 +30,6 @@ const showInfoMovies = (arrayData) =>{
         identityMovie.addEventListener("click", newPageInfoMovie);
         function newPageInfoMovie (){
             mainmovies.innerHTML = "";
-
             //oculta los elementos del divFilms
             document.querySelector(".section_welcome").style.display = "none";
             document.querySelector(".content-text").style.display = "none";
@@ -89,30 +88,27 @@ const showInfoMovies = (arrayData) =>{
             <span class="span_info_Location"><b>Cima: </b>${location.climate}</span></br>
             <span class="span_info_Location"><b>Especie: </b>${location.terrain}</span></br>`;
         })
+    })
             peopleTitleSection.append(sectionPeopleMovie);
             mainmovies.append(asideInfoMovie, sectionDescripMovie, peopleTitleSection );
-                
-   })
     }
 })}
- showInfoMovies(films);
+showInfoMovies(films);
 
-// /*Usando el map para buscar el año de publicación*/
+/*Filtro para el año de publicación*/
 const yearMovie = films.map((item) => {return item.release_date});
 const moviePremier = yearMovie.filter((item, index) => {
     return yearMovie.indexOf(item) === index;})
-///////declaración de variables para que aparezcan las películas dentro de los selects del HTML    
-const yearMoviesPublished = document.querySelector("#input_publication0");
+
+const selectYearPublisher = document.querySelector("#input_publication0");
 for (let i = 0; i < moviePremier.length; i++) {
     let yearMovieTittle = `
     <option value="${moviePremier[i]}">${moviePremier[i]}</option>`
-yearMoviesPublished.innerHTML += yearMovieTittle;
+    selectYearPublisher.innerHTML += yearMovieTittle;
 }
-/*filtro de los años que se crearon las películas*/
-const selectYearPublisher = document.querySelector("#input_publication0");
+
 selectYearPublisher.addEventListener("change", () => {
     const filterMoviexYear = films.filter(function (film) {
-        //console.log(typeof film.release_date, typeof filterYearPublisher.value, film.release_date, filterYearPublisher.value)
         if (film.release_date === selectYearPublisher.value) {
             return true;
         } else {
@@ -122,8 +118,7 @@ selectYearPublisher.addEventListener("change", () => {
     showInfoMovies(filterMoviexYear);
 });
 
-/*Función para buscar el productor*/
-
+/*Filtro para buscar el productor*/
 const searchDuplicateProducter = films.map((item) => { return item.producer });
 const noDuplicatemovieProducer = searchDuplicateProducter.filter((item, index) => {
     return searchDuplicateProducter.indexOf(item) === index;});
@@ -134,19 +129,17 @@ for (let i = 0; i < noDuplicatemovieProducer.length; i++) {
     <option value="${noDuplicatemovieProducer[i]}">${noDuplicatemovieProducer[i]}</option>`   
     selectNameProducer.innerHTML += nameProducer;
 }
-/*filtro de los productores de las peliculas para que aparezcan los titles que produjeron*/
-
 selectNameProducer.addEventListener("change", () => {
     showInfoMovies(filterMoviexProducer(films, selectNameProducer.value));
 });
 
-/*filtrado ascendente y descendente alfabéticamente*/
+/*Filtro ascendente y descendente alfabéticamente*/
 const selectSortOrder = document.querySelector("#input_publication2");
 selectSortOrder.addEventListener("change", () => {
     showInfoMovies(sortData(films,selectSortOrder.value))
 });
 
-/*filtrado ranking por puntaje de películas*/
+/*Filtro ranking por puntaje de películas*/
 const selectRankingMovies = document.querySelector("#input_publication3");
 selectRankingMovies.addEventListener("change", () => {
     showInfoMovies(sortMovieRanking(films,selectRankingMovies.value))

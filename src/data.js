@@ -1,6 +1,5 @@
 /*objeto ordena ascendente y descendente*/
 export const sortData = (data,sortOrder) => {
-  //console.log(data);
     if (sortOrder === "A-Z") {
       data.sort((a,b) => {
         if (a.title > b.title) {
@@ -23,6 +22,7 @@ export const sortData = (data,sortOrder) => {
 }
 return data;
 };
+
 /*objeto ordena mejores y menos rankeadas*/
 export const sortMovieRanking =(data, sortOrder) => {
     if (sortOrder === "Menos rankeadas") {
@@ -48,7 +48,7 @@ else {
 return data;
 }
 
-/*Objeto filtra por año de publicación*/
+/*objeto filtra por año de publicación*/
 export const filterYearPublisher = (films ,release_date) => {
    const filterMovie = films.filter ((film) => {
   if (release_date === film.release_date) {
@@ -59,7 +59,7 @@ export const filterYearPublisher = (films ,release_date) => {
   return filterMovie;
 };
 
-/*Objeto filtra por productor*/
+/*objeto filtra por productor*/
 export const filterMoviexProducer = (films, nameProducer) => {
   const filterNameProducer = films.filter ((film) => {
   if (nameProducer === film.producer) {
