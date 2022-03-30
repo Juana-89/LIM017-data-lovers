@@ -36,6 +36,7 @@ const showInfoMovies = (arrayData) =>{
             document.querySelector(".content-biography").style.display = "none";
             document.querySelector(".span_search").style.display = "none";
             document.querySelector(".header").style.position="absolute";
+            document.querySelector(".btnBackHome").style.display = "block";
 
             //colocar en un aside la portada de la película
             const asideInfoMovie = document.createElement("aside");
@@ -53,44 +54,67 @@ const showInfoMovies = (arrayData) =>{
             <span class="span_descrip_Card"><b>Score: </b>${filmsPublished.rt_score}</span>
             <span class="span_descrip_Card"><div class="span_descrip_Card1"><b>Sipnosis: </b>${filmsPublished.description}</div></br></br></span></br>`;
 
+            //botón regresar a la página inicial
+            const btnBackHome = document.querySelector(".btnBackHome");
+            btnBackHome.addEventListener("click", backHome);
+            function backHome(){
+                mainmovies.appendChild(divFilm);
+                document.querySelector(".header").style.position = "fixed";
+                document.querySelector(".section_welcome").style.display = "block";
+                document.querySelector(".content-text").style.display = "flex";
+                document.querySelector(".content-biography").style.display = "block";
+                document.querySelector(".span_search").style.display = "flex";
+                asideInfoMovie.style.display = "none";
+                showInfoMovies(films);
+            }
+
             //sección de los personajes
-            const peopleTitleSection = document.createElement("section");
-            peopleTitleSection.classList.add("section_title_people");
-            peopleTitleSection.innerHTML+=`<b><h2 class= "h2_section_people">Personajes: </h2></b></br>`
-
             const sectionPeopleMovie = document.createElement("section");
-            sectionPeopleMovie.classList.add("section_people_movie"); 
-
+            sectionPeopleMovie.classList.add("section_people_movie");
+            sectionPeopleMovie.innerHTML=`<span class="span_title_people"><b><h2 class="h2_section_people">Personajes:</h2></b></span>`;
+                    
             const peopleMovie = filmsPublished.people;
             peopleMovie.forEach((people) => {  
             sectionPeopleMovie.innerHTML+=`
-            <img src="${people.img}" class="div_img_people" /><br>
-            <b><h3 class="name_people"><p class="name_people">Nombre: ${people.name}</h3></b></br>
+            <div class="section_div_people_movie"><img src="${people.img}" class="div_img_people" /><br>
+            <div class= "div_info_people"><b><h3 class="name_people"><p class="name_people">Nombre: ${people.name}</h3></b></br>
             <span class="span_info_People"><b>Edad: </b>${people.age}</span></br>
             <span class="span_info_People"><b>Sexo: </b>${people.gender}</span></br>
             <span class="span_info_People"><b>Color de ojo: </b>${people.eye_color}</span></br>
             <span class="span_info_People"><b>Color de cabello: </b>${people.hair_color}</span></br>
-            <span class="span_info_People"><b>Especie: </b>${people.specie}</span></br>`;
+            <span class="span_info_People"><b>Especie: </b>${people.specie}</span></div></div></br>`;
+        });
 
             //sección de los escenarios
-            const locationTitleSection = document.createElement("section");
-            locationTitleSection.classList.add("section_title_location");
-            locationTitleSection.innerHTML+=`<b><h2 class= "h2_section_location">Locaciones: </h2></b></br>`
-
             const sectionLocationMovie = document.createElement("section");
-            sectionLocationMovie.classList.add("section_location_movie"); 
+            sectionLocationMovie.classList.add("section_location_movie");
+            sectionLocationMovie.innerHTML=`<span class="span_title_location"><b><h2 class= "h2_section_location">Locaciones:</h2></b></br></span>`
 
             const locationMovie = filmsPublished.locations;
             locationMovie.forEach((location) => {  
             sectionLocationMovie.innerHTML+=`
-            <img src="${location.img}" class="div_img_location" /><br>
-            <b><h3 class="name_location"><p class="name_location">Nombre: ${location.name}</h3></b></br>
-            <span class="span_info_Location"><b>Cima: </b>${location.climate}</span></br>
-            <span class="span_info_Location"><b>Especie: </b>${location.terrain}</span></br>`;
-        })
-    })
-            peopleTitleSection.append(sectionPeopleMovie);
-            mainmovies.append(asideInfoMovie, sectionDescripMovie, peopleTitleSection );
+            <div class="section_div_location_movie"><img src="${location.img}" class="div_img_location" /><br>
+            <div class= "div_info_location"><b><h3 class="name_location"><p class="name_location">${location.name}</h3></b></br>
+            <span class="span_info_Location"><b>Clima: </b>${location.climate}</span></br>
+            <span class="span_info_Location"><b>Terreno: </b>${location.terrain}</span></div></div></br>`;
+        });
+
+         //sección de los vehículos
+         const sectionVehicleMovie = document.createElement("section");
+         sectionVehicleMovie.classList.add("section_vehicle_movie");
+         sectionVehicleMovie.innerHTML=`<span class="span_title_vehicle"><b><h2 class= "h2_section_vehicle">Vehículos:</h2></b></br></span>`
+
+         const vehicleMovie = filmsPublished.vehicles;
+         vehicleMovie.forEach((vehicle) => {  
+         sectionVehicleMovie.innerHTML+=`
+         <div class="section_div_vehicle_movie"><img src="${vehicle.img}" class="div_img_vehicle" /><br>
+         <div class= "div_info_vehicle"><b><h3 class="name_location"><p class="name_vehicle">${vehicle.name}</h3></b></br>
+         <span class="span_info_vehicle"><b>Descripción: </b>${vehicle.description}</span></br>
+         <span class="span_info_vehicle"><b>Clase: </b>${vehicle.vehicle_class}</span></br>
+         <span class="span_info_vehicle"><b>Capacidad: </b>${vehicle.length}</span></br></div></div></br>`;
+     });    
+    
+         mainmovies.append(asideInfoMovie, sectionDescripMovie, sectionPeopleMovie, sectionLocationMovie, sectionVehicleMovie, btnBackHome );
     }
 })}
 showInfoMovies(films);
