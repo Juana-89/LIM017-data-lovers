@@ -1,45 +1,86 @@
 import dataBase from './data/ghibli/ghibli.js';
-import { computeStats } from './data.js';
+const base = dataBase.films;
 
-// // const dataBase = data.films;
+/*borrar los índices repetidos en los productores*/
+const graphicStatsxDirector = base.map(item => item.director);
+const nameNoDuplicate = graphicStatsxDirector.filter((item, index) => {
+  return graphicStatsxDirector.indexOf(item) === index;})
 
-// // function totalPeoplexGener(stdscore){
-// //     //const {rt_score, title} = dataBase; //solicitamos la info de la data
-// // const chart = new Chart(stdscore, {
-// //     type:"bar",
-// //     data:{
-// //         labels: [1,5,20,50], //dataBase.title.map(item => item.title), //cabecera
-// //         datasets:[
-// //         {   
-// //             label: "Puntuación", //titulo
-// //             backgroundColor: "#4DF4FF",
-// //             borderColor: "#ff5Ab0",
-// //             data: [12,85,85,90] //parseInt(rt_score).map(item => item.rt_score), //cantidad del peliculas
-// //         }
-// //     ]
-// // }
-// // })
-// // }
-// // function renderCharts(){
-// // const stadisticsGraphicGener = document.querySelector("#stadistics_graphic_gener").getContext("2d");
-// // totalPeoplexGener(stadisticsGraphicGener);
-// // }
-// // renderCharts()
+/*contabilizar las películas de acuerdo a los nombres*/
+const countMoviexDirector = graphicStatsxDirector.reduce((counter, name) => {
+  if (counter[name]) {
+    counter[name] = counter[name] + 1;
+  }else{
+    counter[name] = 1;
+  }
+  return counter;
+}, {});
 
-// const femaleGender = computeStats.gender(dataBase.people, "Male" ) + "%";
-// const MaleGender = computeStats.gender(dataBase.people, "Male" ) + "%";
+const stadisticsGraphicDirector = document.querySelector("#stadistics_graphic_director").getContext("2d");
+function totalMoviexDirector(number){
 
-// const sectionComputeGener = document.createElement("section");
-// sectionComputeGener.classList.add("section-Compute");
+const chart = new Chart(number, {
+    type:"bar",
+    data:{
+        labels:nameNoDuplicate, //cabecera
+        datasets:[
+        {   
+            label: "Cantidad de películas dirigidas", //titulo
+            backgroundColor: "#f7b773",
+            borderColor: "#f7b773",
+            data: countMoviexDirector //cantidad del peliculas
+        }
+    ]
+}
+})
+}
+totalMoviexDirector(stadisticsGraphicDirector);
 
-// sectionComputeGener.innerHTML=`
-// <p>Mujeres: ${femaleGender}</p>
-// <p>Hombres: ${MaleGender}</p>`;
+/*stats productores*/
+const graphicStatsxProductor = base.map(item => item.producer);
+const nameNoDuplicateProd = graphicStatsxProductor.filter((item, index) => {
+  return graphicStatsxProductor.indexOf(item) === index;})
 
-const malePercent = computeStats.people.gender(dataBase.films.people , "Male") + "%";
-const femalePercent = computeStats.people.gender(dataBase.films.people, "Female") + "%";
+const countMoviexProductor = graphicStatsxProductor.reduce((counter, name) => {
+  if (counter[name]) {
+    counter[name] = counter[name] + 1;
+  }else{
+    counter[name] = 1;
+  }
+  return counter;
+}, {});
+console.log(countMoviexProductor)
+const stadisticsGraphicProductor = document.querySelector("#stadistics_graphic_productor").getContext("2d");
+function totalMoviexProductor(num){
 
-const sectionStadisticPercent = document.createElement("section");
-sectionStadisticPercent.classList.add("section_descrip_movie");
-sectionStadisticPercent.innerHTML=`<span><b>Masculinos:</b>${malePercent}</span>
-<span><b>Masculinos:</b>${femalePercent}</span>`
+const chart = new Chart(num, {
+    type:"line",
+    data:{
+        labels:nameNoDuplicateProd, //cabecera
+        datasets:[
+        {   
+            label: "Cantidad de películas producidas", //titulo
+            backgroundColor: "#99FFCD",
+            borderColor: "#9FB4FF",
+            data: countMoviexProductor //cantidad del peliculas
+        }
+    ]
+}
+})
+}
+totalMoviexProductor(stadisticsGraphicProductor);
+
+
+
+
+// const graphicStats = base
+// .map(item => item.director)
+// .reduce((counter, name) => {
+//   if (counter[name]) {
+//     counter[name] = counter[name] + 1;
+//   }else{
+//     counter[name] = 1;
+//   }
+//   return counter;
+// }, {});
+// console.log(graphicStats);

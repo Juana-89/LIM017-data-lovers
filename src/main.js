@@ -83,7 +83,7 @@ const showInfoMovies = (arrayData) =>{
             <span class="span_info_People"><b>Color de ojo: </b>${people.eye_color}</span></br>
             <span class="span_info_People"><b>Color de cabello: </b>${people.hair_color}</span></br>
             <span class="span_info_People"><b>Especie: </b>${people.specie}</span></div></div></br>`;
-        });
+            });
 
             //sección de los escenarios
             const sectionLocationMovie = document.createElement("section");
@@ -97,22 +97,22 @@ const showInfoMovies = (arrayData) =>{
             <div class= "div_info_location"><b><h3 class="name_location"><p class="name_location">${location.name}</h3></b></br>
             <span class="span_info_Location"><b>Clima: </b>${location.climate}</span></br>
             <span class="span_info_Location"><b>Terreno: </b>${location.terrain}</span></div></div></br>`;
-        });
+            });
 
-         //sección de los vehículos
-         const sectionVehicleMovie = document.createElement("section");
-         sectionVehicleMovie.classList.add("section_vehicle_movie");
-         sectionVehicleMovie.innerHTML=`<span class="span_title_vehicle"><b><h2 class= "h2_section_vehicle">Vehículos:</h2></b></br></span>`
+            //sección de los vehículos
+            const sectionVehicleMovie = document.createElement("section");
+            sectionVehicleMovie.classList.add("section_vehicle_movie");
+            sectionVehicleMovie.innerHTML=`<span class="span_title_vehicle"><b><h2 class= "h2_section_vehicle">Vehículos:</h2></b></br></span>`
 
-         const vehicleMovie = filmsPublished.vehicles;
-         vehicleMovie.forEach((vehicle) => {  
-         sectionVehicleMovie.innerHTML+=`
-         <div class="section_div_vehicle_movie"><img src="${vehicle.img}" class="div_img_vehicle" /><br>
-         <div class= "div_info_vehicle"><b><h3 class="name_location"><p class="name_vehicle">${vehicle.name}</h3></b></br>
-         <span class="span_info_vehicle"><b>Descripción: </b>${vehicle.description}</span></br>
-         <span class="span_info_vehicle"><b>Clase: </b>${vehicle.vehicle_class}</span></br>
-         <span class="span_info_vehicle"><b>Capacidad: </b>${vehicle.length}</span></br></div></div></br>`;
-     });    
+            const vehicleMovie = filmsPublished.vehicles;
+            vehicleMovie.forEach((vehicle) => {  
+            sectionVehicleMovie.innerHTML+=`
+            <div class="section_div_vehicle_movie"><img src="${vehicle.img}" class="div_img_vehicle" /><br>
+            <div class= "div_info_vehicle"><b><h3 class="name_location"><p class="name_vehicle">${vehicle.name}</h3></b></br>
+            <span class="span_info_vehicle"><b>Descripción: </b>${vehicle.description}</span></br>
+            <span class="span_info_vehicle"><b>Clase: </b>${vehicle.vehicle_class}</span></br>
+            <span class="span_info_vehicle"><b>Capacidad: </b>${vehicle.length}</span></br></div></div></br>`;
+            });    
     
          mainmovies.append(asideInfoMovie, sectionDescripMovie, sectionPeopleMovie, sectionLocationMovie, sectionVehicleMovie, btnBackHome );
     }

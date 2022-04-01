@@ -1,3 +1,6 @@
+// import dataBase from './data/ghibli/ghibli.js';
+// const base = dataBase.films;
+
 /*objeto ordena ascendente y descendente*/
 export const sortData = (data,sortOrder) => {
     if (sortOrder === "A-Z") {
@@ -70,15 +73,13 @@ export const filterMoviexProducer = (films, nameProducer) => {
   return filterNameProducer;
 };
 
-/*Objeto para el computeStates*/
-export const computeStats = (data, genderPeople) => {
-    const totalxGender = data.reduce((total, people) =>{
-    console.log(totalxGender);
-    if (people.gender === genderPeople){
-        return total + 1;
-      }else {
-      return total;
-    }},0);
-    const porcentGender = Math.round((totalxGender / data.length)*100);
-    return porcentGender;
-  };
+// export const rta = base.reduce((acc, direc) =>{
+
+//   if (acc[direc] === acc.producer) {
+//     acc[direc] = acc[direc] + 1;
+//   }else{
+//     acc[direc] = 1;
+//   }
+//   return acc;
+// }, {});
+// console.log(rta);

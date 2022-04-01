@@ -407,7 +407,14 @@ main{
 }
 
 /*gráfico de Estadísticas*/
-#stadistics_graphic_gener{
+#stadistics_graphic_director{
+	margin: 100px;
+	width:auto;
+	height:auto;
+	background-color: #f7fed4;
+}
+
+#stadistics_graphic_productor{
 	margin: 100px;
 	width:auto;
 	height:auto;
