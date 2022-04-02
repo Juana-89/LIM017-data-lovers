@@ -61,8 +61,8 @@ Se realizó el diseño de dos prototipos a mano alzada para plasmar los requerim
 Se realizó la creación de prototipos en figma:
 
 * Para móvil:
-<center><img src= "https://i.ibb.co/7p3M6Cw/celular0.jpg" width ="250px" height = "350px"></center></br>
-<center><img src= "https://i.ibb.co/QY6mw4S/celular1.jpg" width ="250px" height = "350px"></center></br>
+<img src= "https://i.ibb.co/7p3M6Cw/celular0.jpg" width ="250px" height = "350px"></center></br>
+<img src= "https://i.ibb.co/QY6mw4S/celular1.jpg" width ="250px" height = "350px"></center></br>
 
 * Para desktop:
 <center><img src= "https://i.ibb.co/HBbFgK4/pc0.jpg" width ="450px" height = "250px"></center></br>
