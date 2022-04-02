@@ -17,7 +17,7 @@ Estos son datos que se van a emplear:
 * [Studio Ghibli](src/data/ghibli/ghibli.json).
   En este set encontrarás una lista de las animaciones y sus personajes del
   [Studio Ghibli](https://ghiblicollection.com/).
-* [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
+* [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md).
 
 
 ## 2. Investigación UX
@@ -61,12 +61,12 @@ Se realizó el diseño de dos prototipos a mano alzada para plasmar los requerim
 Se realizó la creación de prototipos en figma:</br>
 
 * Para móvil:</br>
-<center><img src= "https://i.ibb.co/7p3M6Cw/celular0.jpg" width ="250px" height = "350px"></center></br>
-<center><img src= "https://i.ibb.co/QY6mw4S/celular1.jpg" width ="250px" height = "350px"></center></br>
+<p align=center><img src= "https://i.ibb.co/7p3M6Cw/celular0.jpg" width ="250px" height = "350px"></center></br>
+<p align=center><img src= "https://i.ibb.co/QY6mw4S/celular1.jpg" width ="250px" height = "350px"></center></br>
 
 * Para desktop:</br>
-<center><img src= "https://i.ibb.co/HBbFgK4/pc0.jpg" width ="450px" height = "250px"></center></br>
-<center><img src= "https://i.ibb.co/QQDmWm9/pc.jpg" width ="450px" height = "250px"></center></br>
+<p align=center><img src= "https://i.ibb.co/HBbFgK4/pc0.jpg" width ="450px" height = "250px"></center></br>
+<p align=center><img src= "https://i.ibb.co/QQDmWm9/pc.jpg" width ="450px" height = "250px"></center></br>
 
 
 ## 5. Desarrollo de interfaz
@@ -77,15 +77,15 @@ Se realizó la creación de prototipos en figma:</br>
 
 2. Realizamos el desarrollo de la interfaz abordando las historias de usuarix en cada Sprint.</br>
 
-<center><img src= "https://i.ibb.co/mtHc1tc/img0.jpg" width ="450px" height = "250px"></center></br>
-<center><img src= "https://i.ibb.co/YN9m6RH/img1.jpg" width ="450px" height = "250px"></center></br>
-<center><img src= "https://i.ibb.co/wdGkqRg/img2.jpg" width ="450px" height = "250px"></center></br>
-<center><img src= "https://i.ibb.co/ccgQSYS/img3.jpg" width ="450px" height = "250px"></center></br>
-<center><img src= "https://i.ibb.co/Vvjxgcb/img4.jpg" width ="450px" height = "250px"></center></br>
-<center><img src= "https://i.ibb.co/P6CSzGv/img5.jpg" width ="450px" height = "250px"></center></br>
-<center><img src= "https://i.ibb.co/cDtV1jy/img6.jpg" width ="450px" height = "250px"></center></br>
-<center><img src= "https://i.ibb.co/BrRxsSv/img7.jpg" width ="450px" height = "250px"></center></br>
-<center><img src= "https://i.ibb.co/dLk4Xnp/img8.jpg" width ="450px" height = "250px"></center></br>
+<p align=center><img src= "https://i.ibb.co/mtHc1tc/img0.jpg" width ="450px" height = "250px"></center></br>
+<p align=center><img src= "https://i.ibb.co/YN9m6RH/img1.jpg" width ="450px" height = "250px"></center></br>
+<p align=center><img src= "https://i.ibb.co/wdGkqRg/img2.jpg" width ="450px" height = "250px"></center></br>
+<p align=center><img src= "https://i.ibb.co/ccgQSYS/img3.jpg" width ="450px" height = "250px"></center></br>
+<p align=center><img src= "https://i.ibb.co/Vvjxgcb/img4.jpg" width ="450px" height = "250px"></center></br>
+<p align=center><img src= "https://i.ibb.co/P6CSzGv/img5.jpg" width ="450px" height = "250px"></center></br>
+<p align=center><img src= "https://i.ibb.co/cDtV1jy/img6.jpg" width ="450px" height = "250px"></center></br>
+<p align=center><img src= "https://i.ibb.co/BrRxsSv/img7.jpg" width ="450px" height = "250px"></center></br>
+<p align=center><img src= "https://i.ibb.co/dLk4Xnp/img8.jpg" width ="450px" height = "250px"></center></br>
 
 <b>Testeos de usabilidad</b>
 
