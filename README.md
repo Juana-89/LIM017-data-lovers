@@ -1,4 +1,4 @@
-# Data Lovers
+# Data Lovers: Studio Ghibli
 
 ## Índice
 
@@ -7,8 +7,6 @@
 * [3. Historias de usuarix](#3-historias-usuarixs)
 * [4. Diseño de la interfaz](#4-diseño-de-interfaz)
 * [5. Desarrollo del proyecto](#5-desarrollo-proyecto)
-
-*
 
 ## 1. Resumen del proyecto
 
@@ -19,72 +17,76 @@ Estos son datos que se van a emplear:
 * [Studio Ghibli](src/data/ghibli/ghibli.json).
   En este set encontrarás una lista de las animaciones y sus personajes del
   [Studio Ghibli](https://ghiblicollection.com/).
-  - [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
+* [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md).
+
 
 ## 2. Investigación UX
 
 Se realizó una investigación previa, por medio de las siguientes preguntas:
 
-* ¿Por qué te gustan las películas de Studio Ghibli?
+* <b>¿Por qué te gustan las películas de Studio Ghibli?</b></br>
   Lxs usuarixs consideran que todas las películas son emocionantes y conmovedoras por igual.
 
-* ¿Qué información te gustaría encontrar?
+* <b>¿Qué información te gustaría encontrar?</b></br>
   Lxs usuarixs desean obtener información de todas las películas producidas por el Studio Ghibli.
 
-* ¿Qué plataforma utilizas más para ver películas?
+* <b>¿Qué plataforma utilizas más para ver películas?</b></br>
   Lxs usuarixs utilizar por igual su móvil como su laptop.
+
 
 ## 3. Historia de Usuarix
 
 En función a nuestra investigación, se crearon las siguientes *Historias de usuarix*
 
-* Historia de Usuarix N° 1:
+* <b>Historia de Usuarix N° 1:</b></br>
   Yo como usuarix quiero encontrar infomación de todas las películas del Studio Ghibli.
 
-* Historia de Usuarix N° 2:
+* <b>Historia de Usuarix N° 2:</b></br>
   Yo como usuarix quiero encontrar inforamción relacionada al Studio Ghibli, que proporcione contenido.
 
-* Historia de Usuarix N° 3:
+* <b>Historia de Usuarix N° 3:</b></br>
   Yo como usuarix quiero obtener información de los personajes, locaciones y especies.
 
+
 ## 4. Diseño de la interfaz de usuario UI
-### Prototipo de baja fidelidad
+<b>Prototipo de baja fidelidad</b>
 
 Se realizó el diseño de dos prototipos a mano alzada para plasmar los requerimientos solicitados para el desarrollo de la interfaz de usuario.
 
-<center><img src= "https://i.ibb.co/dtQCtFk/Whats-App-Image-2022-04-02-at-12-45-10-PM.jpg"></center>
-<center><img src= "https://i.ibb.co/0ht1z4m/Whats-App-Image-2022-04-02-at-12-57-36-PM.jpg"></center>
+<center><img id = "readme_img1" src= "https://i.ibb.co/dtQCtFk/Whats-App-Image-2022-04-02-at-12-45-10-PM.jpg" width ="350px" height = "350px"></center></br>
+<center><img src= "https://i.ibb.co/0ht1z4m/Whats-App-Image-2022-04-02-at-12-57-36-PM.jpg" width ="350px" height = "350px"></center></br>
 
-### Prototipo de alta fidelidad
+<b>Prototipo de alta fidelidad</b>
 
 Se realizó la creación de prototipos en figma:
 
-* Para móvil
-<img src= "https://i.ibb.co/7p3M6Cw/celular0.jpg">
-<img src= "https://i.ibb.co/QY6mw4S/celular1.jpg">
+* Para móvil:
+<center><img src= "https://i.ibb.co/7p3M6Cw/celular0.jpg" width ="250px" height = "350px"></center></br>
+<center><img src= "https://i.ibb.co/QY6mw4S/celular1.jpg" width ="250px" height = "350px"></center></br>
 
-* Para desktop
-<img src= "https://i.ibb.co/QQDmWm9/pc.jpg">
-<img src= "https://i.ibb.co/HBbFgK4/pc0.jpg">
+* Para desktop:
+<center><img src= "https://i.ibb.co/HBbFgK4/pc0.jpg" width ="450px" height = "250px"></center></br>
+<center><img src= "https://i.ibb.co/QQDmWm9/pc.jpg" width ="450px" height = "250px"></center></br>
+
 
 ## 5. Desarrollo de interfaz
 
-### Plan de acción
+<b>Plan de acción</b>
 
 1. Nuestra prioridad fue darle todas las herramientas visuales y funcionales al usuarix, brindando una experiencia interactiva y con el contenido esperado en base a los resultados de nuestra investigación.
 
 2. Realizamos el desarrollo de la interfaz abordando las historias de usuarix en cada Sprint.
 
-<img src= "https://i.ibb.co/mtHc1tc/img0.jpg">
-<img src= "https://i.ibb.co/YN9m6RH/img1.jpg">
-<img src= "https://i.ibb.co/wdGkqRg/img2.jpg">
-<img src= "https://i.ibb.co/ccgQSYS/img3.jpg">
-<img src= "https://i.ibb.co/Vvjxgcb/img4.jpg">
-<img src= "https://i.ibb.co/P6CSzGv/img5.jpg">
-<img src= "https://i.ibb.co/cDtV1jy/img6.jpg">
-<img src= "https://i.ibb.co/BrRxsSv/img7.jpg">
-<img src= "https://i.ibb.co/dLk4Xnp/img8.jpg">
+<center><img src= "https://i.ibb.co/mtHc1tc/img0.jpg" width ="450px" height = "250px"></center></br>
+<center><img src= "https://i.ibb.co/YN9m6RH/img1.jpg" width ="450px" height = "250px"></center></br>
+<center><img src= "https://i.ibb.co/wdGkqRg/img2.jpg" width ="450px" height = "250px"></center></br>
+<center><img src= "https://i.ibb.co/ccgQSYS/img3.jpg" width ="450px" height = "250px"></center></br>
+<center><img src= "https://i.ibb.co/Vvjxgcb/img4.jpg" width ="450px" height = "250px"></center></br>
+<center><img src= "https://i.ibb.co/P6CSzGv/img5.jpg" width ="450px" height = "250px"></center></br>
+<center><img src= "https://i.ibb.co/cDtV1jy/img6.jpg" width ="450px" height = "250px"></center></br>
+<center><img src= "https://i.ibb.co/BrRxsSv/img7.jpg" width ="450px" height = "250px"></center></br>
+<center><img src= "https://i.ibb.co/dLk4Xnp/img8.jpg" width ="450px" height = "250px"></center></br>
 
-### Testeos de usabilidad
+<b>Testeos de usabilidad</b>
 
 Los testeos de usabilidad fueron indispensables en el desarrollo del proyecto, puesto que en base a ellos logramos verificar que nuestras funciones implementadas en JavaScript se ejecutaban correctamente. Se creó una muestra de la data para poder implementar los test unitarios que nos permitan verificar con exactitud cada una de las pruebas.
