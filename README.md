@@ -51,20 +51,20 @@ En función a nuestra investigación, se crearon las siguientes *Historias de us
 ## 4. Diseño de la interfaz de usuario UI
 <b>Prototipo de baja fidelidad</b>
 
-Se realizó el diseño de dos prototipos a mano alzada para plasmar los requerimientos solicitados para el desarrollo de la interfaz de usuario.
+Se realizó el diseño de dos prototipos a mano alzada para plasmar los requerimientos solicitados para el desarrollo de la interfaz de usuario.</br>
 
 <center><img src= "https://i.ibb.co/dtQCtFk/Whats-App-Image-2022-04-02-at-12-45-10-PM.jpg" width ="350px" height = "350px"></center></br>
 <center><img src= "https://i.ibb.co/0ht1z4m/Whats-App-Image-2022-04-02-at-12-57-36-PM.jpg" width ="350px" height = "350px"></center></br>
 
 <b>Prototipo de alta fidelidad</b>
 
-Se realizó la creación de prototipos en figma:
+Se realizó la creación de prototipos en figma:</br>
 
-* Para móvil:
+* Para móvil:</br>
 <center><img src= "https://i.ibb.co/7p3M6Cw/celular0.jpg" width ="250px" height = "350px"></center></br>
 <center><img src= "https://i.ibb.co/QY6mw4S/celular1.jpg" width ="250px" height = "350px"></center></br>
 
-* Para desktop:
+* Para desktop:</br>
 <center><img src= "https://i.ibb.co/HBbFgK4/pc0.jpg" width ="450px" height = "250px"></center></br>
 <center><img src= "https://i.ibb.co/QQDmWm9/pc.jpg" width ="450px" height = "250px"></center></br>
 
@@ -73,9 +73,9 @@ Se realizó la creación de prototipos en figma:
 
 <b>Plan de acción</b>
 
-1. Nuestra prioridad fue darle todas las herramientas visuales y funcionales al usuarix, brindando una experiencia interactiva y con el contenido esperado en base a los resultados de nuestra investigación.
+1. Nuestra prioridad fue darle todas las herramientas visuales y funcionales al usuarix, brindando una experiencia interactiva y con el contenido esperado en base a los resultados de nuestra investigación.</br>
 
-2. Realizamos el desarrollo de la interfaz abordando las historias de usuarix en cada Sprint.
+2. Realizamos el desarrollo de la interfaz abordando las historias de usuarix en cada Sprint.</br>
 
 <center><img src= "https://i.ibb.co/mtHc1tc/img0.jpg" width ="450px" height = "250px"></center></br>
 <center><img src= "https://i.ibb.co/YN9m6RH/img1.jpg" width ="450px" height = "250px"></center></br>
