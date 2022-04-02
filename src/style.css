@@ -408,14 +408,14 @@ main{
 
 /*gráfico de Estadísticas*/
 #stadistics_graphic_director{
-	margin: 100px;
+	margin: 10px;
 	width:auto;
 	height:auto;
 	background-color: #f7fed4;
 }
 
 #stadistics_graphic_productor{
-	margin: 100px;
+	margin: 10px;
 	width:auto;
 	height:auto;
 	background-color: #f7fed4;
@@ -458,9 +458,10 @@ main{
 /*imagen de la película elegida*/
 .aside_info_movie img{
 	position: relative; /*al div padre se le pone esto*/ 
-	margin: auto;
+	
 	width: 1348px;
 	height: 688px;
+	left: 0px;
 }
 
 .section_descrip_movie{

@@ -52,7 +52,7 @@ return data;
 }
 
 /*objeto filtra por año de publicación*/
-export const filterYearPublisher = (films ,release_date) => {
+export const filterYearPublished = (films ,release_date) => {
    const filterMovie = films.filter ((film) => {
   if (release_date === film.release_date) {
     return true;

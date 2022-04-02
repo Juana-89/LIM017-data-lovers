@@ -20,15 +20,18 @@ const stadisticsGraphicDirector = document.querySelector("#stadistics_graphic_di
 function totalMoviexDirector(number){
 
 const chart = new Chart(number, {
+  
     type:"bar",
+    
     data:{
         labels:nameNoDuplicate, //cabecera
         datasets:[
         {   
-            label: "Cantidad de películas dirigidas", //titulo
+            label: "Número películas dirigidas", //leyenda
             backgroundColor: "#f7b773",
             borderColor: "#f7b773",
-            data: countMoviexDirector //cantidad del peliculas
+            hoverBackgroundColor: "#9FB4FF",
+            data: countMoviexDirector, //cantidad del peliculas
         }
     ]
 }
@@ -50,19 +53,21 @@ const countMoviexProductor = graphicStatsxProductor.reduce((counter, name) => {
   return counter;
 }, {});
 console.log(countMoviexProductor)
+
 const stadisticsGraphicProductor = document.querySelector("#stadistics_graphic_productor").getContext("2d");
 function totalMoviexProductor(num){
 
 const chart = new Chart(num, {
     type:"line",
     data:{
-        labels:nameNoDuplicateProd, //cabecera
+        labels:nameNoDuplicateProd, //leyenda
         datasets:[
         {   
             label: "Cantidad de películas producidas", //titulo
             backgroundColor: "#99FFCD",
             borderColor: "#9FB4FF",
-            data: countMoviexProductor //cantidad del peliculas
+            data: countMoviexProductor, //cantidad del peliculas
+            borderWidth: 5,
         }
     ]
 }
@@ -71,16 +76,14 @@ const chart = new Chart(num, {
 totalMoviexProductor(stadisticsGraphicProductor);
 
 
-
-
-// const graphicStats = base
-// .map(item => item.director)
-// .reduce((counter, name) => {
-//   if (counter[name]) {
-//     counter[name] = counter[name] + 1;
-//   }else{
-//     counter[name] = 1;
-//   }
-//   return counter;
-// }, {});
-// console.log(graphicStats);
+const graphicStats = base
+.map(item => item.director)
+.reduce((counter, name) => {
+  if (counter[name]) {
+    counter[name] = counter[name] + 1;
+  }else{
+    counter[name] = 1;
+  }
+  return counter;
+}, {});
+console.log(graphicStats);

@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js';
-import { sortData, sortMovieRanking, filterMoviexProducer } from './data.js';
+import { sortData, sortMovieRanking, filterMoviexProducer, filterYearPublished } from './data.js';
 const films = data.films;
 const mainmovies = document.querySelector("main");
 
@@ -124,22 +124,15 @@ const yearMovie = films.map((item) => {return item.release_date});
 const moviePremier = yearMovie.filter((item, index) => {
     return yearMovie.indexOf(item) === index;})
 
-const selectYearPublisher = document.querySelector("#input_publication0");
+const selectYearPublished = document.querySelector("#input_publication0");
 for (let i = 0; i < moviePremier.length; i++) {
     let yearMovieTittle = `
     <option value="${moviePremier[i]}">${moviePremier[i]}</option>`
-    selectYearPublisher.innerHTML += yearMovieTittle;
+    selectYearPublished.innerHTML += yearMovieTittle;
 }
 
-selectYearPublisher.addEventListener("change", () => {
-    const filterMoviexYear = films.filter(function (film) {
-        if (film.release_date === selectYearPublisher.value) {
-            return true;
-        } else {
-            return false;
-        }
-    })
-    showInfoMovies(filterMoviexYear);
+selectYearPublished.addEventListener("change", () => {
+    showInfoMovies(filterYearPublished(films, selectYearPublished.value));
 });
 
 /*Filtro para buscar el productor*/
