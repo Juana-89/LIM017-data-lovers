@@ -53,8 +53,8 @@ En función a nuestra investigación, se crearon las siguientes *Historias de us
 
 Se realizó el diseño de dos prototipos a mano alzada para plasmar los requerimientos solicitados para el desarrollo de la interfaz de usuario.</br>
 
-<center><img src= "https://i.ibb.co/dtQCtFk/Whats-App-Image-2022-04-02-at-12-45-10-PM.jpg" width ="350px" height = "350px"></center></br>
-<center><img src= "https://i.ibb.co/0ht1z4m/Whats-App-Image-2022-04-02-at-12-57-36-PM.jpg" width ="350px" height = "350px"></center></br>
+<p align=center><img src= "https://i.ibb.co/dtQCtFk/Whats-App-Image-2022-04-02-at-12-45-10-PM.jpg" width ="350px" height = "350px"></center></br>
+<p align=center><img src= "https://i.ibb.co/0ht1z4m/Whats-App-Image-2022-04-02-at-12-57-36-PM.jpg" width ="350px" height = "350px"></center></br>
 
 <b>Prototipo de alta fidelidad</b>
 
