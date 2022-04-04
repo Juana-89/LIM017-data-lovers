@@ -47,7 +47,17 @@ describe('filterYearPublished', () => {
     "rt_score": "95"},
     ]
     expect(result).toEqual(resultExpected);
-  })
+  });
+  it('Devuelve películas del año 1988', () => {
+    const result = filterYearPublished(dataFilms, "1988")
+    expect(result).toEqual([
+      {"id": "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
+      "title": "Mi vecino Totoro",
+      "director": "Hayao Miyazaki",
+      "producer": "Hayao Miyazaki",
+      "release_date": "1988",
+      "rt_score": "93" }]);
+  });
 });
 
 describe('sortMovieRanking', () => {
@@ -79,7 +89,7 @@ describe('sortMovieRanking', () => {
 });
 
 describe('sortData', () => {
-  it('Devuelve el orden de la película A-Z', () => {
+  it('Devuelve el orden de la película de A-Z', () => {
     const result = sortData(dataFilms, "A-Z")
     const resultExpected = [
       {
