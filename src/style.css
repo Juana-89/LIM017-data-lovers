@@ -91,7 +91,7 @@ audio{
 	
 	  }
 	  /*media para responsive*/
-	  @media (max-width: 1000px) {
+	  @media (max-width: 950px) {
 		#section_welcome{
 			height: auto;
 		
@@ -380,6 +380,7 @@ main{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	margin-top: 50px;
 }
 
 .section-input_text{
@@ -468,10 +469,10 @@ main{
 /*imagen de la película elegida*/
 .aside_info_movie img{
 	position: relative; /*al div padre se le pone esto*/ 
-	
 	width: 1348px;
 	height: 688px;
-	left: 0px;
+	left: 0;
+	top: 50px;
 }
 
 .section_descrip_movie{
@@ -481,7 +482,7 @@ main{
 	height: 688px;
 	position: absolute; /*al div hijo se le pone esto*/
 	left: 0; 
-	margin-top: 0;
+	margin-top: 50px;
 	text-align: justify;
 }
 /*se le crea otro div para acomodar la sipnosis dentro de la imagen*/
@@ -498,8 +499,7 @@ main{
 .h2_section_people{
 	font-size: 45px;
 	font-weight: bold;
-	margin-top: 25px;
-	/* margin-left: -580px; */
+	margin-top: 30px;
 }
 
 .div_img_people{
@@ -532,8 +532,8 @@ main{
 	font-size: 45px;
 	font-weight: bold;
 	margin-top: 25px;
-	/* margin-left: -580px; */
 }
+
 .section_location_movie{
 	font-family: 'Short Stack', cursiva;
 	font-size: 14px;	
@@ -543,6 +543,7 @@ main{
 	grid-gap: 30px;
 	position: relative;
 }
+
 .div_img_location{
 	width: 350px;
 	height: 300px;

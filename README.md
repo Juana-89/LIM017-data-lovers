@@ -14,7 +14,7 @@ La página web desarrollada está orientada a brindar información a todas las p
 
 Estos son datos que se van a emplear:
 
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
+* [Studio Ghibli](src/data/ghibli/ghibli.json):
   En este set encontrarás una lista de las animaciones y sus personajes del
   [Studio Ghibli](https://ghiblicollection.com/).
 * [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md).

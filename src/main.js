@@ -37,6 +37,7 @@ const showInfoMovies = (arrayData) =>{
             document.querySelector(".span_search").style.display = "none";
             document.querySelector(".header").style.position="absolute";
             document.querySelector(".btnBackHome").style.display = "block";
+            document.querySelector(".contenido-stadistics").style.display = "none";
 
             //colocar en un aside la portada de la película
             const asideInfoMovie = document.createElement("aside");
@@ -71,7 +72,7 @@ const showInfoMovies = (arrayData) =>{
             //sección de los personajes
             const sectionPeopleMovie = document.createElement("section");
             sectionPeopleMovie.classList.add("section_people_movie");
-            sectionPeopleMovie.innerHTML=`<span class="span_title_people"><b><h2 class="h2_section_people">Personajes:</h2></b></span>`;
+            sectionPeopleMovie.innerHTML=`<span class="span_title_people"><b><h2 class="h2_section_people">Personajes:</h2></br></b></span>`;
                     
             const peopleMovie = filmsPublished.people;
             peopleMovie.forEach((people) => {  

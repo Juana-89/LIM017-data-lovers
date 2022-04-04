@@ -1,6 +1,3 @@
-// import dataBase from './data/ghibli/ghibli.js';
-// const base = dataBase.films;
-
 /*objeto ordena ascendente y descendente*/
 export const sortData = (data,sortOrder) => {
     if (sortOrder === "A-Z") {
@@ -72,14 +69,3 @@ export const filterMoviexProducer = (films, nameProducer) => {
   }});
   return filterNameProducer;
 };
-
-// export const rta = base.reduce((acc, direc) =>{
-
-//   if (acc[direc] === acc.producer) {
-//     acc[direc] = acc[direc] + 1;
-//   }else{
-//     acc[direc] = 1;
-//   }
-//   return acc;
-// }, {});
-// console.log(rta);
