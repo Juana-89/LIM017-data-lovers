@@ -27,10 +27,6 @@ nav {
 	height: 80px;
 }
 
-audio{
-	visibility: hidden;
-	}
-
 .link-image{
 	position: absolute;
 	padding: 0 50px;
@@ -306,8 +302,7 @@ td	{
 
 #content-biography{
 	font-family: 'Short Stack', cursiva;
-	padding: 100px 20px 10px 10px;
-	
+	padding: 100px 40px 20px 20px;
 }
 
 .list__movies {
@@ -402,12 +397,12 @@ main{
 	margin-left: 20px;	 
 }
 
-/* audio{
+audio{
 	width: 12em;
 	height: 21px;
 	margin-left: -50em;
 	margin-right: 5em;
-} */
+}
 
 .p_div_card_title{
 	font-size: 18px;
@@ -435,9 +430,13 @@ main{
 .contenido-stadistics{
 	/* visibility: hidden; */
 	font-family: "Short stack", cursiva;
-	padding: 40px;
+	padding: 100px 40px;
 }
 
+.h3_title_graphic{
+	color:#D21119
+
+}
 /*estilos para los cards de las tarjetas al momento de darles click*/
 .btnBackHome{
 	position: absolute;
