@@ -85,7 +85,12 @@ describe('sortMovieRanking', () => {
         }
       ];
       expect(sortMovieRanking(result)).toEqual(resultExpected);
-      })
+      });
+
+      it('Devuelve un array siempre', () => {
+        expect(filterMoviexProducer(dataFilms, "producer")instanceof Array).toBe(true);
+      });
+      
   });
 
 describe('sortData', () => {
@@ -110,7 +115,7 @@ describe('sortData', () => {
     expect(result).toEqual(resultExpected);
   });
 
-  it('Devuelve el orden de la película de Z-A', () => {
+    it('Devuelve el orden de la película de Z-A', () => {
     const result = sortData(dataFilms, "Z-A")
     const resultExpected = [
       {
@@ -130,4 +135,6 @@ describe('sortData', () => {
     ]
     expect(sortData(result)).toEqual(resultExpected);
   });
+
+  
 });
