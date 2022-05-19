@@ -4,12 +4,22 @@ const films = data.films;
 const mainmovies = document.querySelector("main");
 
 /*función que activa música en botón "Leer más"*/
-const audioMusicTotoro = document.querySelector("#button_start");
-audioMusicTotoro.addEventListener("click", () => {
-    const audioTagTotoro = document.querySelector("#audio-Totoro");
-    audioTagTotoro.play();
-});
+//const audioMusicTotoro = document.querySelector("#div_audio_totoro");
+const imgMusicPlay = document.querySelector("#img_audio");
+const imgMusicStop = document.querySelector("#img_audio_stop");
+const audioTagTotoro = document.querySelector("#audio-Totoro");
 
+imgMusicPlay.addEventListener("click", () => {
+    audioTagTotoro.play();
+    imgMusicPlay.style.display = "none";
+    imgMusicStop.style.display = "inline";
+});
+imgMusicStop.addEventListener("click", () => {
+    audioTagTotoro.pause();
+    imgMusicPlay.style.display = "inline";
+    imgMusicStop.style.display = "none";
+
+});
 /*función que muestra carteles de películas */
 const showInfoMovies = (arrayData) =>{
     mainmovies.innerHTML = "";
