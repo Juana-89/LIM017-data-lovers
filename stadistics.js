@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 import dataBase from './data/ghibli/ghibli.js';
 const base = dataBase.films;
 
@@ -52,7 +54,6 @@ const countMoviexProductor = graphicStatsxProductor.reduce((counter, name) => {
   }
   return counter;
 }, {});
-console.log(countMoviexProductor)
 
 const stadisticsGraphicProductor = document.querySelector("#stadistics_graphic_productor").getContext("2d");
 function totalMoviexProductor(num){
@@ -74,16 +75,3 @@ const chart = new Chart(num, {
 })
 }
 totalMoviexProductor(stadisticsGraphicProductor);
-
-
-const graphicStats = base
-.map(item => item.director)
-.reduce((counter, name) => {
-  if (counter[name]) {
-    counter[name] = counter[name] + 1;
-  }else{
-    counter[name] = 1;
-  }
-  return counter;
-}, {});
-console.log(graphicStats);
