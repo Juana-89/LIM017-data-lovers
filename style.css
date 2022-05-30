@@ -20,6 +20,7 @@ header{
 	position: fixed; /*se fija la position del header*/
 	width: 100%;
 	top:0;
+	z-index: 1 !important;
 }
 
 nav {
@@ -107,7 +108,68 @@ audio {
 }
 
 	  /*media para responsive*/
-	  @media (max-width: 1080px) {
+	  @media (max-width: 414px) {
+		.nav_ul_list_a{
+			font-size: 20px
+		}
+
+		.nav_menu{
+			visibility: hidden
+		}
+
+		li a.hover{
+			background: none;
+			color: deeppink;
+		}
+
+		nav ul li{
+			display: block !important;
+			float:none;
+			border-bottom: 1px solid rgb(255, 255, 255, .3);
+		}
+
+		nav ul li:hover{
+			background:#747070;
+			color: #000;
+		}
+		
+		.check_boton{
+			display: block;
+		}
+
+		#check:checked ~.nav_menu {
+			display: block;
+			visibility: visible !important;
+			position:fixed;
+			width: 100%;
+			height: 35%;
+			background:  #323030 ;
+			color: #fff;
+			top: 80px;
+			/* text-align: center; */
+			transition: all .8s;
+		}
+		#check:checked ~.list_header{
+			visibility: visible !important;
+			float:left;
+			margin:35px 0;
+			line-height:20px;
+		}
+		#main-header{
+			width: 100%;
+			/* height: 100%; */
+			margin: 0;
+			position: fixed;
+		}
+		nav ul li a{
+			font-size: 16px;
+			margin-top: 0;
+		}
+		.span_ico{
+			display: inline-block;
+			margin-right: 10px;
+		}
+
 		#section_welcome{
 			height: 500px;
 		}
@@ -115,21 +177,21 @@ audio {
 		#img_audio{
 			width: 40%;
 		}
+
 		#text-welcome1{
-			font-size: 70px;
-			margin-top:100px;
-			text-shadow: 3px 5px  rgba(0, 0, 0, 0.9);
+		    font-size: 140px !important;
+			margin-top:170px !important;
 		}
 		
 		#text-welcome2{
-			font-size: 20px;
-			text-shadow: 2px 2px  rgba(255, 252, 252, 0.9);
+			font-size: 24px !important;
+			text-shadow: 3px 3px  rgba(255, 252, 252, 0.9) !important;
 			margin-top:1em;
 		}
 		
 		#text-welcome3{
-			font-size: 20px;
-			text-shadow: 2px 2px  rgba(255, 252, 252, 0.9);
+			font-size: 24px !important;
+			text-shadow: 3px 3px  rgba(255, 252, 252, 0.9) !important;
 		}
 		
 		#button_start{
@@ -143,69 +205,56 @@ audio {
 			padding-left: 20px;
 		}
 
-		nav ul li a{
-			font-size: 16px;
-			margin-top: 0;
-		}
-
 		audio{
 			visibility: hidden;
 		}
 	
-		.check_boton{
-			display: block;
-		}
-	
-		.nav_menu{
-			position:fixed;
-			width: 100%;
-			height: 40vh;
-			background:  #323030 ;
-			color: #fff;
-			top: 80px;
-			left:-100%;
-			text-align: center;
-			transition: all .8s;
-		}
-	
-		.list_header{
-			display:block;
-			margin:35px 0;
-			line-height:20px;
-		}
-
-		.nav_ul_list_a{
-			font-size: 20px
-		}
-
-		li a.hover{
-			background: none;
-			color: deeppink;
-			}
-
-		#check:checked ~ ul {
-			left:0;
-			}
-
 		#section_welcome{
-			height: auto;
-			width: auto;
-			}
-		
-		
+			height: 60vh;
+		}
+
+		#content-studio{
+			max-width: 50% !important;
+			background: url(./img/castillo_ambu.gif) no-repeat;
+			background-position: bottom;
+			background-size: 255%;
+			height: 98%;
+		}
+		div section aside img {
+			margin-left: -80px !important;
+		}
+		#table-info{
+			height: 740px !important;
+		}
 		.span_search{
-			width: auto;
-			height: auto;
-			padding-top: 30px;
-			padding-left: 75px;
-			justify-content: space-between;	/*trabaja con el margin o padding para el espaciado*/
-			margin-right:50px;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			}
-		
-		
+			width: auto !important;
+			height: auto !important;
+			justify-content: space-between !important;	/*trabaja con el margin o padding para el espaciado*/
+			display: flex !important;
+			flex-direction: row !important;
+			flex-wrap: wrap !important;
+			margin: 25px !important;
+			padding: 35px !important;
+			/* position: absolute;
+			padding-top: 1784px !important; */
+		}
+		.div_search{
+			margin-left: -85px;
+		}
+		.div_title_search{
+			margin-left: 65px;
+		}
+		#input_publication2{
+			margin-left: 60px;
+		}
+		#content-movies{
+			margin-top: -75px;
+		}
+		.div_content_movies{
+			margin: 80px 30px !important;
+			margin-bottom: 5px !important;
+			margin-left: 10px !important;
+		}
 	}
 
 #text-welcome1{
@@ -482,10 +531,12 @@ audio{
 	position: relative; /*al div padre se le pone esto*/ 
 	width: 1348px;
 	height: 688px;
-	left: 0;
+	left: -32px;
 	top: 50px;
 }
-
+.section_div_people_movie{
+	margin-top: 25px;
+}
 .section_descrip_movie{
 	background-color: #000;
 	opacity: 90%;
@@ -504,9 +555,10 @@ audio{
 /*formato a la section section_people_movie*/
 
 .span_title_people{
-	margin-top:-95px;
+	margin-top:-75px;
 	width: 15px;
 }
+
 .h2_section_people{
 	font-size: 45px;
 	font-weight: bold;
@@ -522,6 +574,11 @@ audio{
 	background-color: #fff;
 	margin: auto;
 }
+
+.div_info_people{
+	margin-top: 25px;
+}
+
 .section_people_movie{
 	font-family: 'Short Stack', cursiva;
 	font-size: 14px;	
@@ -535,6 +592,7 @@ audio{
 .span_descrip_Card{
 	margin: 0 25px;
 }
+
 .span_title_location{
 	margin-top:-95px;
 	width: 15px;
@@ -565,10 +623,16 @@ audio{
 	margin: auto;
 }
 
+.div_info_location{
+	text-align: left;
+    margin-top: 25px;
+}
+
 .span_title_vehicle{
 	margin-top:-95px;
 	width: 15px;
 }
+
 .h2_section_vehicle{
 	font-size: 45px;
 	font-weight: bold;
@@ -584,6 +648,10 @@ audio{
 	grid-template-columns: repeat(6, 1fr);
 	grid-gap: 30px;
 	position: relative;
+}
+
+.div_info_vehicle{
+	margin-top:25px;
 }
 
 .div_img_vehicle{

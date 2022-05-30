@@ -48,7 +48,10 @@ const showInfoMovies = (arrayData) =>{
             document.querySelector(".header").style.position="absolute";
             document.querySelector(".btnBackHome").style.display = "block";
             document.querySelector(".contenido-stadistics").style.display = "none";
-
+            document.querySelector("#img_audio").style.display = "none";
+            document.querySelector("#img_audio_stop").style.display = "none";
+            
+            imgMusicPlay.style.display = "none";
             //colocar en un aside la portada de la película
             const asideInfoMovie = document.createElement("aside");
             asideInfoMovie.classList.add("aside_info_movie");
@@ -75,7 +78,6 @@ const showInfoMovies = (arrayData) =>{
                 document.querySelector(".content-text").style.display = "flex";
                 document.querySelector(".content-biography").style.display = "block";
                 document.querySelector(".span_search").style.display = "flex";
-                asideInfoMovie.style.display = "none";
                 showInfoMovies(films);
             }
 
