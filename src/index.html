@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Caompatible" content="ie=edge">
     <title>Data Lovers | Studio Ghibli </title>
     <link rel="icon" href="totoro_ico.ico">
-    <link rel="stylesheet" type="text/css" href="style.css">    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./img/fonts.css">    
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Shizuru&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
@@ -24,14 +25,13 @@
     <a href="#" class="link-image"><img class="header__image_logo" src="img/logo2.png" alt="Logo de Data Lovers"></a>   
     <input type="checkbox" id="check" />
     <label for="check" class="check_boton"><i class="fa-solid fa-bars"></i></label>
-            
     <ul class="nav_menu">
-        <li class="list__header"><a href="#" class="nav_ul_list__a">Inicio</a></li>
-        <li class="list__header"><a href="#content-biography" class="nav_ul_list__a">Historia</a></li>
-        <li class="list__header"><a href="#content-movies" class="nav_ul_list__a">Filmografía</a></li>
-        <li class="list__header"><a href="#content-stadistics" class="nav_ul_list__a" id="nav_ul_list__a">Estadísticas</a></li>
-        <li class="list__header"><a href="https://www.netflix.com/pe/browse/genre/81227213" target="_blank" class="nav_ul_list__a">Netflix</a></li>
-        <li class="list__header"><a href="https://open.spotify.com/playlist/37i9dQZF1DX7GTqMQDhOum?si=4d5b0fe976514d9f" target="_blank" class="nav_ul_list__a">Spotify</a></li>
+        <li class="list__header"><span id="icon-library" class="span_ico" hidden></span><a href="#content-biography" class="nav_ul_list__a">Historia</a></li>
+        <li class="list__header"><span id="icon-video-camera" class="span_ico" hidden></span><a href="#content-movies" class="nav_ul_list__a">Filmografía</a></li>
+        <li class="list__header"><span id="icon-home" class="span_ico" hidden></span><a href="#" class="nav_ul_list__a">Inicio</a></li>
+        <li class="list__header"><span id="icon-stats-dots" class="span_ico" hidden></span><a href="#content-stadistics" class="nav_ul_list__a" id="nav_ul_list__a">Estadísticas</a></li>
+        <li class="list__header"><span id="icon-play2" class="span_ico" hidden></span><a href="https://www.netflix.com/pe/browse/genre/81227213" target="_blank" class="nav_ul_list__a">Netflix</a></li>
+        <li class="list__header"><span id="icon-spotify" class="span_ico" hidden></span><a href="https://open.spotify.com/playlist/37i9dQZF1DX7GTqMQDhOum?si=4d5b0fe976514d9f" target="_blank" class="nav_ul_list__a">Spotify</a></li>
     </ul>
     </nav>
     </header>
@@ -147,7 +147,7 @@
     </div>
     
     <span class="span_search">
-    <div id="div_search"><b class="div_title_search">Año de publicación</b>
+    <div class="div_search"><b class="div_title_search">Año de publicación</b>
     <select id="input_publication0" class="section-input_text">
         <option value="todos" disabled selected>Selecciona</option></select>
     </div>
