@@ -3,14 +3,8 @@
   "films": [
     {
       "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
-<<<<<<< HEAD
-      "cover": "https://i.ibb.co/Ms6BGk2/wallpaper-Castillo-en-el-cielo.jpg",
-      "title": "El castillo en el cielo",
-      "description": "Es la primera película oficial realizada y producida por Studio Ghibli, si no tenemos en cuenta a la anterior. En esta película los protagonistas son Sheeta y Pazu, dos niños que intentan proteger una piedra mágica de un grupo de militares, que quieren conseguirla para llegar a una isla, 'Laputa', que, según cuentan las leyendas, flota en el cielo.",
-=======
       "title": "El castillo en el cielo",
       "description": "Dirigida por Hayao Miyazaki, es la primera película oficial realizada y producida por Studio Ghibli, si no tenemos en cuenta a la anterior. En esta película los protagonistas son Sheeta y Pazu, dos niños que intentan proteger una piedra mágica de un grupo de militares, que quieren conseguirla para llegar a una isla, 'Laputa', que, según cuentan las leyendas, flota en el cielo.",
->>>>>>> 509565547303de0917306aec192e6b3ceb242454
       "director": "Hayao Miyazaki",
       "producer": "Isao Takahata",
       "poster": "https://i.ibb.co/s3mtq76/1986-castillo-cartel.jpg",
